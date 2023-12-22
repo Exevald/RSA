@@ -116,7 +116,6 @@ def convert_num_to_bigramm(num: int, alphabet: dict) -> (str, str):
 def encrypt(text: str, public_key: tuple, alphabet: dict) -> str:
     result_str = ''
     bigramms_list = get_bigramms(text)
-    print(bigramms_list)
     for bigramm in bigramms_list:
         bigramm_in_num = convert_bigramm_to_num(bigramm, alphabet, public_key[0], public_key[1])
         trigramm = convert_num_to_trigramm(bigramm_in_num, alphabet)
